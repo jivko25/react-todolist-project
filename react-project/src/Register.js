@@ -35,7 +35,7 @@ class Register extends React.Component{
         }  
         else{
         if(localStorage.getItem(username) == null){
-        var obj = {'username': username, 'password' : password, 'permissions' : permissions};
+        var obj = {'username': username, 'password' : password, 'permissions' : permissions, 'tasks' : "[]"};
         var stObj = JSON.stringify(obj);
         localStorage.setItem(this.state.username, stObj);
         var newobj = localStorage.getItem(username);
